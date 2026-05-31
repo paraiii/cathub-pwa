@@ -1,0 +1,803 @@
+{
+  "_id": "003e6f9d6992d5ba00c324ab2520e6e8",
+  "date": "2025-10-21",
+  "note": "没消化的猫粮+罐头+黄水 ",
+  "timestamp": 1.7610264E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:30:50.181Z"
+  }
+}
+{
+  "_id": "ebcc84046992d63700c0433c591e25cd",
+  "timestamp": 1.761084E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:32:55.513Z"
+  },
+  "date": "2025-10-22",
+  "note": "透明微黄液体"
+}
+{
+  "_id": "e3ea29d76992d64f00c3243c0defb582",
+  "createTime": {
+    "$date": "2026-02-16T08:33:19.915Z"
+  },
+  "date": "2025-10-26",
+  "note": "凌晨吐出一坨毛球",
+  "timestamp": 1.7613972E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "26894d4e6992d66800c4bd3f470daaa7",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:33:44.409Z"
+  },
+  "date": "2026-02-16",
+  "timestamp": 1.7711928E+12,
+  "type": "weight",
+  "value": 4.59,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "8cb811d26992d69500c4195d45f96240",
+  "timestamp": 1.7709588E+12,
+  "type": "weight",
+  "value": 4.64,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:34:29.856Z"
+  },
+  "date": "2026-02-13"
+}
+{
+  "_id": "af7b5bfd6992d6b100c1e7f74e5f84c3",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:34:57.061Z"
+  },
+  "date": "2026-02-12",
+  "timestamp": 1.7708724E+12,
+  "type": "weight",
+  "value": 4.69
+}
+{
+  "_id": "6d99dae86992d6c400c3ccc635dc6a4d",
+  "createTime": {
+    "$date": "2026-02-16T08:35:16.325Z"
+  },
+  "date": "2026-02-11",
+  "timestamp": 1.770768E+12,
+  "type": "weight",
+  "value": 4.58,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "112e17ec6992d6d100c0dca31f6f1c15",
+  "type": "weight",
+  "value": 4.6,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:35:29.525Z"
+  },
+  "date": "2026-02-09",
+  "timestamp": 1.7705952E+12
+}
+{
+  "_id": "3577bc8c6992d6f100c4d3347d9426d5",
+  "createTime": {
+    "$date": "2026-02-16T08:36:01.092Z"
+  },
+  "date": "2025-12-19",
+  "timestamp": 1.7661276E+12,
+  "type": "weight",
+  "value": 4.7,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "6d99dae86992d73500c3d7f82df97e8a",
+  "timestamp": 1.7631036E+12,
+  "type": "weight",
+  "value": 4.9,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:37:09.583Z"
+  },
+  "date": "2025-11-14"
+}
+{
+  "_id": "012ace5f6992d74500c574196f9b4bc8",
+  "type": "weight",
+  "value": 4.8,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:37:25.382Z"
+  },
+  "date": "2025-11-28",
+  "timestamp": 1.7643132E+12
+}
+{
+  "_id": "6d99dae86992d76300c3d8dc41dbf139",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:37:55.679Z"
+  },
+  "date": "2026-01-04",
+  "timestamp": 1.76751E+12,
+  "type": "weight",
+  "value": 4.85,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "af7b5bfd6992d80100c2014f13e59d70",
+  "type": "weight",
+  "value": 4.62,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:40:33.225Z"
+  },
+  "date": "2026-02-16",
+  "timestamp": 1.7712312E+12
+}
+{
+  "_id": "8cb811d26992d81700c43e7c23f22439",
+  "createTime": {
+    "$date": "2026-02-16T08:40:55.162Z"
+  },
+  "date": "2026-02-05",
+  "note": "毛球",
+  "timestamp": 1.7702808E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "e3ea29d76992d82900c3603d3cc84d20",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-16T08:41:13.176Z"
+  },
+  "date": "2026-02-08",
+  "note": "吐出一小坨透明液体",
+  "timestamp": 1.77054E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "2ae59a40699653b60103b12d3744d659",
+  "value": 4.61,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-19T00:05:10.896Z"
+  },
+  "date": "2026-02-19",
+  "timestamp": 1.771459401924E+12,
+  "type": "weight"
+}
+{
+  "_id": "112e17ec699666ae0107ae7818f3234e",
+  "createTime": {
+    "$date": "2026-02-19T01:26:06.557Z"
+  },
+  "date": "2026-02-19",
+  "timestamp": 1.771464360563E+12,
+  "type": "weight",
+  "value": 4.62,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "e3ea29d7699718b10114e0fd61a93da1",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-19T14:05:37.214Z"
+  },
+  "date": "2026-02-20",
+  "note": "吐了一小口透明浅黄色液体",
+  "timestamp": 1.771509920004E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "003e6f9d6997196a011323f06464a33e",
+  "createTime": {
+    "$date": "2026-02-19T14:08:42.455Z"
+  },
+  "date": "2026-02-20",
+  "timestamp": 1.771509920004E+12,
+  "type": "weight",
+  "value": 4.49,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "3577bc8c699792b6012084e71903339a",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-19T22:46:14.966Z"
+  },
+  "date": "2026-02-20",
+  "timestamp": 1.77154112983E+12,
+  "type": "weight",
+  "value": 4.48,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "af7b5bfd6997ab2a011e619b23760f70",
+  "type": "weight",
+  "value": 4.54,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-20T00:30:34.696Z"
+  },
+  "date": "2026-02-20",
+  "timestamp": 1.771547387326E+12
+}
+{
+  "_id": "af7b5bfd69986aee012d99c27bb48678",
+  "createTime": {
+    "$date": "2026-02-20T14:08:46.569Z"
+  },
+  "date": "2026-02-21",
+  "note": "吐小口白色泡沫状浅黄色液体",
+  "timestamp": 1.7715927E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "112e17ec69986b05012dd0bd1285885c",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-20T14:09:09.138Z"
+  },
+  "date": "2026-02-21",
+  "note": "喷射吐白色泡沫状浅黄色液体",
+  "timestamp": 1.7715936E+12,
+  "type": "vomit"
+}
+{
+  "_id": "003e6f9d69986b1f012f2f684bbad035",
+  "timestamp": 1.7715948E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-20T14:09:35.387Z"
+  },
+  "date": "2026-02-21",
+  "note": "呕吐一大摊白色泡沫状淡黄色液体"
+}
+{
+  "_id": "f9fbf60c69987817013464a42b691226",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-20T15:04:55.46Z"
+  },
+  "date": "2026-01-31",
+  "note": "毛球",
+  "timestamp": 1.76981664E+12,
+  "type": "vomit"
+}
+{
+  "_id": "7b2d62806998787d0134934d49f7bfdd",
+  "note": "少量黄色液体",
+  "timestamp": 1.76860704E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-20T15:06:37.367Z"
+  },
+  "date": "2026-01-17"
+}
+{
+  "_id": "de6403aa6998788f01319d141335e0ab",
+  "createTime": {
+    "$date": "2026-02-20T15:06:55.674Z"
+  },
+  "date": "2026-01-13",
+  "note": "透明白色液体+少量毛",
+  "timestamp": 1.76826144E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "6d99dae86998789a01313e614395cd46",
+  "note": "无备注",
+  "timestamp": 1.76782944E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-20T15:07:06.033Z"
+  },
+  "date": "2026-01-08"
+}
+{
+  "_id": "0ee59149699878c30130dc21267d6bf6",
+  "createTime": {
+    "$date": "2026-02-20T15:07:47.531Z"
+  },
+  "date": "2026-01-05",
+  "note": "吃了草，吐出草+透明黄色液体+几片猫粮",
+  "timestamp": 1.76757024E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "112e17ec69987aa60132c79726d92325",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-20T15:15:50.884Z"
+  },
+  "date": "2026-02-21",
+  "timestamp": 1.771600537135E+12,
+  "type": "weight",
+  "value": 4.38,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "6d35fcb36999610d014b29c869441cb4",
+  "value": 4.48,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-21T07:38:53.275Z"
+  },
+  "date": "2026-02-21",
+  "timestamp": 1.771659527865E+12,
+  "type": "weight"
+}
+{
+  "_id": "ebcc8404699a5efc01555adc52f0af58",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-22T01:42:20.236Z"
+  },
+  "date": "2026-02-22",
+  "timestamp": 1.771724530077E+12,
+  "type": "weight",
+  "value": 4.71
+}
+{
+  "_id": "cb82d098699b8d0a0173849048359e04",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-22T23:11:06.14Z"
+  },
+  "date": "2026-02-23",
+  "timestamp": 1.771801857839E+12,
+  "type": "weight",
+  "value": 4.69,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "2ae59a40699c0bb3017c301340c08f92",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-23T08:11:31.578Z"
+  },
+  "date": "2026-02-23",
+  "timestamp": 1.771834282044E+12,
+  "type": "weight",
+  "value": 4.78,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "f9fbf60c699cdb35018f69231de7ede5",
+  "date": "2026-02-24",
+  "timestamp": 1.771887405783E+12,
+  "type": "weight",
+  "value": 4.77,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-23T22:56:53.014Z"
+  }
+}
+{
+  "_id": "112e17ec699d0d2f0192873073d875e2",
+  "timestamp": 1.771900199586E+12,
+  "type": "weight",
+  "value": 4.7,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-24T02:30:07.752Z"
+  },
+  "date": "2026-02-24"
+}
+{
+  "_id": "003e6f9d699e6c0f01afb92c63e4a5cd",
+  "createTime": {
+    "$date": "2026-02-25T03:27:11.582Z"
+  },
+  "date": "2026-02-25",
+  "timestamp": 1.771990025817E+12,
+  "type": "weight",
+  "value": 4.7,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "ebcc8404699ea4af01b238c2262a5d23",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-02-25T07:28:47.262Z"
+  },
+  "date": "2026-02-25",
+  "timestamp": 1.77200472E+12,
+  "type": "weight",
+  "value": 4.68
+}
+{
+  "_id": "f9fbf60c699efd5d01bf300923a82bdb",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-02-25T13:47:09.598Z"
+  },
+  "date": "2026-02-26",
+  "timestamp": 1.772027225476E+12,
+  "type": "weight",
+  "value": 4.72
+}
+{
+  "_id": "0ee59149699f7c5701c7f97178c2f5ad",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-02-25T22:48:55.498Z"
+  },
+  "date": "2026-02-26",
+  "timestamp": 1.77205968E+12,
+  "type": "weight",
+  "value": 4.75
+}
+{
+  "_id": "6d35fcb369a0fd3b01f469834bce0bc7",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-02-27T02:11:07.022Z"
+  },
+  "date": "2026-02-27",
+  "timestamp": 1.7721474E+12,
+  "type": "weight",
+  "value": 4.71
+}
+{
+  "_id": "3577bc8c69a0fd4201e98bfa26210213",
+  "date": "2026-02-27",
+  "timestamp": 1.77215832E+12,
+  "type": "weight",
+  "value": 4.69,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-02-27T02:11:14.476Z"
+  }
+}
+{
+  "_id": "af7b5bfd69a14dfb01f038c2494cf6d0",
+  "value": 4.72,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-02-27T07:55:39.391Z"
+  },
+  "date": "2026-02-27",
+  "timestamp": 1.772178934707E+12,
+  "type": "weight"
+}
+{
+  "_id": "a0df538269a226b80004254a10284880",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-02-27T23:20:24.108Z"
+  },
+  "date": "2026-02-28",
+  "note": "只吐出一坨毛球",
+  "timestamp": 1.772234410049E+12,
+  "type": "vomit"
+}
+{
+  "_id": "04c1843869a4bf7000041ff32e75a7b2",
+  "type": "weight",
+  "value": 4.6,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-03-01T22:36:32.464Z"
+  },
+  "date": "2026-03-01",
+  "timestamp": 1.77236856E+12
+}
+{
+  "_id": "311e171069a4bf7500041f4036186c9a",
+  "createTime": {
+    "$date": "2026-03-01T22:36:37.543Z"
+  },
+  "date": "2026-03-02",
+  "timestamp": 1.772404593471E+12,
+  "type": "weight",
+  "value": 4.59,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "51c07c7169a5385b000b726c276e792d",
+  "createTime": {
+    "$date": "2026-03-02T07:12:27.367Z"
+  },
+  "date": "2026-03-02",
+  "timestamp": 1.772435544055E+12,
+  "type": "weight",
+  "value": 4.61,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "7e3969aa69a5f89600199aed5e9f4dcc",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-03-02T20:52:38.047Z"
+  },
+  "date": "2026-03-03",
+  "note": "吐出一坨毛 神色",
+  "timestamp": 1.772484745011E+12,
+  "type": "vomit"
+}
+{
+  "_id": "0f431e5469a61321001a203954694701",
+  "type": "weight",
+  "value": 4.55,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-03-02T22:45:53.321Z"
+  },
+  "date": "2026-03-03",
+  "timestamp": 1.772491549155E+12
+}
+{
+  "_id": "18ffb4c969ac0579008ca15446913c8c",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-03-07T11:01:13.763Z"
+  },
+  "date": "2026-03-07",
+  "timestamp": 1.772881269277E+12,
+  "type": "weight",
+  "value": 4.66
+}
+{
+  "_id": "01dd11eb69b34496005b2b393fea1301",
+  "value": 4.66,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "createTime": {
+    "$date": "2026-03-12T22:56:22.04Z"
+  },
+  "date": "2026-03-13",
+  "timestamp": 1.773356175932E+12,
+  "type": "weight"
+}
+{
+  "_id": "6172875369b9ed4400969a5c32df118d",
+  "timestamp": 1.773792573453E+12,
+  "type": "weight",
+  "value": 4.67,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-03-18T00:09:40.877Z"
+  },
+  "date": "2026-03-18"
+}
+{
+  "_id": "f0df711e69b9ed4f00951da8673bbca2",
+  "createTime": {
+    "$date": "2026-03-18T00:09:51.277Z"
+  },
+  "date": "2026-03-18",
+  "note": "吐出毛球",
+  "timestamp": 1.77378174E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "69d4baf669bea53501069b4c0b6eb39a",
+  "type": "weight",
+  "value": 5.56,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-03-21T14:03:33.795Z"
+  },
+  "date": "2026-03-22",
+  "timestamp": 1.774101786164E+12
+}
+{
+  "_id": "b3c6c3d569c5052901b3312f538e81c1",
+  "createTime": {
+    "$date": "2026-03-26T10:06:33.851Z"
+  },
+  "date": "2026-03-26",
+  "timestamp": 1.774519586802E+12,
+  "type": "weight",
+  "value": 4.58,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "4d75389069c5b3e7001d2d280f7e43be",
+  "createTime": {
+    "$date": "2026-03-26T22:32:07.695Z"
+  },
+  "date": "2026-03-27",
+  "note": "吐出黄色猫粮色液体 还有一块香菇",
+  "timestamp": 1.774564298212E+12,
+  "type": "vomit",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "9f5d149069c8ae6e02073eeb45663389",
+  "timestamp": 1.774759529081E+12,
+  "type": "weight",
+  "value": 4.64,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A",
+  "createTime": {
+    "$date": "2026-03-29T04:45:34.646Z"
+  },
+  "date": "2026-03-29"
+}
+{
+  "_id": "69d4baf669d9cf9503c7db7373499247",
+  "createTime": {
+    "$date": "2026-04-11T04:35:33.605Z"
+  },
+  "date": "2026-04-11",
+  "timestamp": 1.77588212704E+12,
+  "type": "weight",
+  "value": 4.58,
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "catName": "猫咪A"
+}
+{
+  "_id": "d603decf69e444c3002ac1ce519918ef",
+  "value": 4.47,
+  "createTime": {
+    "$date": "2026-04-19T02:58:11.922Z"
+  },
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "type": "weight",
+  "timestamp": 1.77656748644E+12,
+  "catName": "猫咪A",
+  "date": "2026-04-19"
+}
+{
+  "_id": "6b0b394169e753c10003d11445eb3577",
+  "catName": "猫咪A",
+  "date": "2026-04-21",
+  "value": 4.4,
+  "createTime": {
+    "$date": "2026-04-21T10:38:57.117Z"
+  },
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "type": "weight",
+  "timestamp": 1.776767928355E+12
+}
+{
+  "_id": "18b1344f69e87b5f001c94f5107e80b0",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "type": "weight",
+  "timestamp": 1.776843608688E+12,
+  "catName": "猫咪A",
+  "date": "2026-04-22",
+  "value": 4.54,
+  "createTime": {
+    "$date": "2026-04-22T07:40:15.718Z"
+  }
+}
+{
+  "_id": "f4fad4e069e8de9000286904784f3a6b",
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "type": "weight",
+  "timestamp": 1.776869004362E+12,
+  "catName": "猫咪A",
+  "date": "2026-04-23",
+  "value": 4.48,
+  "createTime": {
+    "$date": "2026-04-22T14:43:28.754Z"
+  }
+}
+{
+  "_id": "948392db69f3045d00538244579de39c",
+  "createTime": {
+    "$date": "2026-04-30T07:27:25.748Z"
+  },
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "type": "weight",
+  "timestamp": 1.777534041185E+12,
+  "catName": "猫咪A",
+  "date": "2026-04-30",
+  "value": 4.55
+}
+{
+  "_id": "eb87832669f304790052b3ac43ff2ccd",
+  "date": "2026-04-28",
+  "note": "吐出一坨毛球",
+  "createTime": {
+    "$date": "2026-04-30T07:27:53.675Z"
+  },
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "type": "vomit",
+  "timestamp": 1.77732882E+12,
+  "catName": "猫咪A"
+}
+{
+  "_id": "8e40b4e269f3ee6c006b58d55d7b4d4d",
+  "createTime": {
+    "$date": "2026-05-01T00:06:04.942Z"
+  },
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "type": "weight",
+  "timestamp": 1.77759396025E+12,
+  "catName": "猫咪A",
+  "date": "2026-05-01",
+  "value": 4.66
+}
+{
+  "_id": "148caf506a0126c901d7105465324c31",
+  "type": "vomit",
+  "timestamp": 1.7784531E+12,
+  "catName": "猫咪A",
+  "date": "2026-05-11",
+  "note": "吐了一小坨透明液体，疑似吐毛球没吐出来",
+  "createTime": {
+    "$date": "2026-05-11T00:46:01.982Z"
+  },
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "54479e7f6a0bcc6900cc677449cd80b2",
+  "type": "weight",
+  "timestamp": 1.779158115162E+12,
+  "catName": "猫咪A",
+  "date": "2026-05-19",
+  "value": 4.57,
+  "createTime": {
+    "$date": "2026-05-19T02:35:21.465Z"
+  },
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "c5c2a88a6a0f1a21000815c441b52e8f",
+  "date": "2026-05-22",
+  "value": 4.7,
+  "createTime": {
+    "$date": "2026-05-21T14:43:45.137Z"
+  },
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM",
+  "type": "weight",
+  "timestamp": 1.77937461996E+12,
+  "catName": "猫咪A"
+}
