@@ -16,6 +16,8 @@ export default defineConfig({
                 short_name: 'CatHub',
                 description: "Track your cat's weight and health.",
                 theme_color: '#ffffff',
+                background_color: '#ffffff',
+                display: 'standalone',
                 icons: [{
                         src: 'pwa-192x192.png',
                         sizes: '192x192',
