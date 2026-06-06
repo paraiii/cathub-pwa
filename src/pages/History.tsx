@@ -4,6 +4,7 @@ import { ArrowLeft, Scale, Activity } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 import { api, WeightRecord, VomitRecord } from '../services/api';
 import { Box, Typography, Container, IconButton, Tabs, Tab, Paper } from '@mui/material';
+import { CatProfileMenu } from '../components/CatProfileMenu';
 
 export default function History() {
   const navigate = useNavigate();
@@ -11,21 +12,25 @@ export default function History() {
   const [weights, setWeights] = useState<WeightRecord[]>([]);
   const [vomits, setVomits] = useState<VomitRecord[]>([]);
 
+  const loadData = async () => {
+    setWeights(await api.getWeights());
+    setVomits(await api.getVomits());
+  };
+
   useEffect(() => {
-    const loadData = async () => {
-      setWeights(await api.getWeights());
-      setVomits(await api.getVomits());
-    };
     loadData();
   }, []);
 
   return (
     <Container maxWidth="sm" sx={{ minHeight: '100vh', pb: 4, px: { xs: 2, sm: 3 } }}>
-      <Box component="header" sx={{ py: 3, display: 'flex', alignItems: 'center', gap: 2 }}>
-        <IconButton onClick={() => navigate(-1)} edge="start">
-          <ArrowLeft size={24} />
-        </IconButton>
-        <Typography variant="h1" sx={{ fontSize: '1.5rem', lineHeight: 1.2 }}>History</Typography>
+      <Box component="header" sx={{ py: 3, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          <IconButton onClick={() => navigate(-1)} edge="start" sx={{ bgcolor: 'white', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+            <ArrowLeft size={24} />
+          </IconButton>
+          <Typography variant="h1" sx={{ fontSize: '1.5rem', lineHeight: 1.2 }}>History</Typography>
+        </Box>
+        <CatProfileMenu onCatChange={loadData} />
       </Box>
 
       <Box sx={{ mb: 3 }}>

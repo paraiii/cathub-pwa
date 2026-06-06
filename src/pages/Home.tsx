@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Calendar } from '../components/Calendar';
 import { WeightChart } from '../components/WeightChart';
+import { CatProfileMenu } from '../components/CatProfileMenu';
 import { Activity, Scale, History } from 'lucide-react';
-import { format, isSameMonth, parseISO } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import { api, WeightRecord, VomitRecord } from '../services/api';
 import {
   Box, Typography, Button, Paper, Container, Dialog,
@@ -72,6 +73,7 @@ export default function Home() {
             <Typography variant="body2" color="text.secondary">Health Tracker</Typography>
           </Box>
         </Box>
+        <CatProfileMenu onCatChange={loadData} />
       </Box>
 
       <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 3 }}>

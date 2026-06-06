@@ -801,3 +801,27 @@
   "timestamp": 1.77937461996E+12,
   "catName": "猫咪A"
 }
+{
+  "_id": "148caf506a0126c901d7105465324c31",
+  "type": "vomit",
+  "timestamp": 1.7784531E+12,
+  "catName": "猫咪A",
+  "date": "2026-06-02",
+  "note": "昨天出门吃草，今早吐了四次，有黄水，白色泡沫液体",
+  "createTime": {
+    "$date": "2026-06-02T00:46:01.982Z"
+  },
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
+{
+  "_id": "148caf506a0126c901d7105465324c31",
+  "type": "vomit",
+  "timestamp": 1.7784531E+12,
+  "catName": "猫咪A",
+  "date": "2026-06-06",
+  "note": "白天吐了一坨小毛球",
+  "createTime": {
+    "$date": "2026-06-02T00:46:01.982Z"
+  },
+  "_openid": "oM9gy3aEug1QawHwddtpn8jf8BdM"
+}
