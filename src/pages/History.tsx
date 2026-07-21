@@ -5,12 +5,15 @@ import { format, parseISO } from 'date-fns';
 import { api, WeightRecord, VomitRecord } from '../services/api';
 import { Box, Typography, Container, IconButton, Tabs, Tab, Paper } from '@mui/material';
 import { CatProfileMenu } from '../components/CatProfileMenu';
+import { RecordEditDialog } from '../components/RecordEditDialog';
 
 export default function History() {
   const navigate = useNavigate();
   const [tab, setTab] = useState<'weight' | 'vomit'>('weight');
   const [weights, setWeights] = useState<WeightRecord[]>([]);
   const [vomits, setVomits] = useState<VomitRecord[]>([]);
+  const [selectedRecord, setSelectedRecord] = useState<(WeightRecord | VomitRecord) & { type: 'weight' | 'vomit' } | null>(null);
+  const [isEditModalOpen, setEditModalOpen] = useState(false);
 
   const loadData = async () => {
     setWeights(await api.getWeights());
@@ -80,7 +83,15 @@ export default function History() {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
             {weights.length === 0 ? <Typography align="center" color="text.secondary" sx={{ py: 4 }}>No weight records found.</Typography> : null}
             {weights.map(w => (
-              <Box key={w.id} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', p: 2, bgcolor: 'background.default', borderRadius: 3 }}>
+              <Box 
+                key={w.id} 
+                onClick={() => { setSelectedRecord({ ...w, type: 'weight' }); setEditModalOpen(true); }}
+                sx={{ 
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
+                  p: 2, bgcolor: 'background.default', borderRadius: 3,
+                  cursor: 'pointer', '&:hover': { bgcolor: 'action.hover' }
+                }}
+              >
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                   <Box sx={{ color: 'primary.main', display: 'flex' }}><Scale size={24} /></Box>
                   <Box>
@@ -98,7 +109,14 @@ export default function History() {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
             {vomits.length === 0 ? <Typography align="center" color="text.secondary" sx={{ py: 4 }}>No vomit records found.</Typography> : null}
             {vomits.map(v => (
-              <Box key={v.id} sx={{ p: 2, bgcolor: 'background.default', borderRadius: 3 }}>
+              <Box 
+                key={v.id} 
+                onClick={() => { setSelectedRecord({ ...v, type: 'vomit' }); setEditModalOpen(true); }}
+                sx={{ 
+                  p: 2, bgcolor: 'background.default', borderRadius: 3,
+                  cursor: 'pointer', '&:hover': { bgcolor: 'action.hover' }
+                }}
+              >
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: v.description ? 1 : 0 }}>
                   <Box sx={{ color: 'error.main', display: 'flex' }}><Activity size={24} /></Box>
                   <Box>
@@ -116,6 +134,15 @@ export default function History() {
           </Box>
         )}
       </Paper>
+
+      {/* Record Edit Modal */}
+      <RecordEditDialog
+        isOpen={isEditModalOpen}
+        onClose={() => setEditModalOpen(false)}
+        onSuccess={loadData}
+        record={selectedRecord}
+        type={selectedRecord?.type as 'weight' | 'vomit'}
+      />
     </Container>
   );
 }

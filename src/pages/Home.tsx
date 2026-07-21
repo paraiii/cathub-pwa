@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Calendar } from '../components/Calendar';
 import { WeightChart } from '../components/WeightChart';
 import { CatProfileMenu } from '../components/CatProfileMenu';
+import { RecordEditDialog } from '../components/RecordEditDialog';
 import { Activity, Scale, History } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 import { api, WeightRecord, VomitRecord } from '../services/api';
@@ -18,6 +19,8 @@ export default function Home() {
   const [vomits, setVomits] = useState<VomitRecord[]>([]);
   const [isWeightModalOpen, setWeightModalOpen] = useState(false);
   const [isVomitModalOpen, setVomitModalOpen] = useState(false);
+  const [selectedRecord, setSelectedRecord] = useState<(WeightRecord | VomitRecord) & { type: 'weight' | 'vomit' } | null>(null);
+  const [isEditModalOpen, setEditModalOpen] = useState(false);
 
   // Form states
   const [weightValue, setWeightValue] = useState('');
@@ -97,7 +100,15 @@ export default function Home() {
             <Typography align="center" color="text.secondary" sx={{ py: 3 }}>No recent records.</Typography>
           ) : (
             recentRecords.map(record => (
-              <Box key={record.id} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', p: 1.5, bgcolor: 'background.default', borderRadius: 3 }}>
+              <Box 
+                key={record.id} 
+                onClick={() => { setSelectedRecord(record); setEditModalOpen(true); }}
+                sx={{ 
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
+                  p: 1.5, bgcolor: 'background.default', borderRadius: 3,
+                  cursor: 'pointer', '&:hover': { bgcolor: 'action.hover' }
+                }}
+              >
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                   <Box sx={{ color: record.type === 'weight' ? 'primary.main' : 'error.main', display: 'flex' }}>
                     {record.type === 'weight' ? <Scale size={20} /> : <Activity size={20} />}
@@ -188,6 +199,14 @@ export default function Home() {
           </DialogActions>
         </form>
       </Dialog>
+      {/* Record Edit Modal */}
+      <RecordEditDialog
+        isOpen={isEditModalOpen}
+        onClose={() => setEditModalOpen(false)}
+        onSuccess={loadData}
+        record={selectedRecord}
+        type={selectedRecord?.type as 'weight' | 'vomit'}
+      />
     </Container>
   );
 }

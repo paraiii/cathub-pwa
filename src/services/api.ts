@@ -82,6 +82,22 @@ export const api = {
     return { id: data.id, catId: data.cat_id, weight: data.weight, date: data.date };
   },
   
+  updateWeight: async (id: string, weight: number, date: string): Promise<void> => {
+    const { error } = await supabase
+      .from('weights')
+      .update({ weight, date })
+      .eq('id', id);
+    if (error) throw error;
+  },
+  
+  deleteWeight: async (id: string): Promise<void> => {
+    const { error } = await supabase
+      .from('weights')
+      .delete()
+      .eq('id', id);
+    if (error) throw error;
+  },
+  
   getVomits: async (): Promise<VomitRecord[]> => {
     const { data, error } = await supabase
       .from('vomits')
@@ -100,6 +116,22 @@ export const api = {
       .single();
     if (error) throw error;
     return { id: data.id, catId: data.cat_id, description: data.description, date: data.date };
+  },
+  
+  updateVomit: async (id: string, description: string, date: string): Promise<void> => {
+    const { error } = await supabase
+      .from('vomits')
+      .update({ description, date })
+      .eq('id', id);
+    if (error) throw error;
+  },
+  
+  deleteVomit: async (id: string): Promise<void> => {
+    const { error } = await supabase
+      .from('vomits')
+      .delete()
+      .eq('id', id);
+    if (error) throw error;
   }
 };
 
