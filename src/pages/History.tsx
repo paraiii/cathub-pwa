@@ -14,6 +14,7 @@ export default function History() {
   const [vomits, setVomits] = useState<VomitRecord[]>([]);
   const [selectedRecord, setSelectedRecord] = useState<(WeightRecord | VomitRecord) & { type: 'weight' | 'vomit' } | null>(null);
   const [isEditModalOpen, setEditModalOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const loadData = async () => {
     setWeights(await api.getWeights());
@@ -22,6 +23,9 @@ export default function History() {
 
   useEffect(() => {
     loadData();
+    api.isAdmin().then(setIsAdmin);
+    const sub = api.onAuthStateChange(setIsAdmin);
+    return () => sub.unsubscribe();
   }, []);
 
   return (
@@ -85,7 +89,12 @@ export default function History() {
             {weights.map(w => (
               <Box 
                 key={w.id} 
-                onClick={() => { setSelectedRecord({ ...w, type: 'weight' }); setEditModalOpen(true); }}
+                onClick={() => {
+                  if (isAdmin) {
+                    setSelectedRecord({ ...w, type: 'weight' }); 
+                    setEditModalOpen(true);
+                  }
+                }}
                 sx={{ 
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
                   p: 2, bgcolor: 'background.default', borderRadius: 3,
@@ -111,7 +120,12 @@ export default function History() {
             {vomits.map(v => (
               <Box 
                 key={v.id} 
-                onClick={() => { setSelectedRecord({ ...v, type: 'vomit' }); setEditModalOpen(true); }}
+                onClick={() => {
+                  if (isAdmin) {
+                    setSelectedRecord({ ...v, type: 'vomit' }); 
+                    setEditModalOpen(true);
+                  }
+                }}
                 sx={{ 
                   p: 2, bgcolor: 'background.default', borderRadius: 3,
                   cursor: 'pointer', '&:hover': { bgcolor: 'action.hover' }

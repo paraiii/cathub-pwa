@@ -21,6 +21,7 @@ export default function Home() {
   const [isVomitModalOpen, setVomitModalOpen] = useState(false);
   const [selectedRecord, setSelectedRecord] = useState<(WeightRecord | VomitRecord) & { type: 'weight' | 'vomit' } | null>(null);
   const [isEditModalOpen, setEditModalOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   // Form states
   const [weightValue, setWeightValue] = useState('');
@@ -30,6 +31,9 @@ export default function Home() {
 
   useEffect(() => {
     loadData();
+    api.isAdmin().then(setIsAdmin);
+    const sub = api.onAuthStateChange(setIsAdmin);
+    return () => sub.unsubscribe();
   }, []);
 
   const loadData = async () => {
@@ -79,14 +83,16 @@ export default function Home() {
         <CatProfileMenu onCatChange={loadData} />
       </Box>
 
-      <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 3 }}>
-        <Button variant="contained" color="primary" onClick={() => setWeightModalOpen(true)} startIcon={<Scale size={20} />} fullWidth>
-          Weight
-        </Button>
-        <Button variant="contained" color="error" onClick={() => setVomitModalOpen(true)} startIcon={<Activity size={20} />} fullWidth>
-          Vomit
-        </Button>
-      </Box>
+      {isAdmin && (
+        <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 3 }}>
+          <Button variant="contained" color="primary" onClick={() => setWeightModalOpen(true)} startIcon={<Scale size={20} />} fullWidth>
+            Weight
+          </Button>
+          <Button variant="contained" color="error" onClick={() => setVomitModalOpen(true)} startIcon={<Activity size={20} />} fullWidth>
+            Vomit
+          </Button>
+        </Box>
+      )}
 
       <Paper sx={{ mb: 3, p: 2 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
@@ -102,7 +108,12 @@ export default function Home() {
             recentRecords.map(record => (
               <Box 
                 key={record.id} 
-                onClick={() => { setSelectedRecord(record); setEditModalOpen(true); }}
+                onClick={() => {
+                  if (isAdmin) {
+                    setSelectedRecord(record); 
+                    setEditModalOpen(true);
+                  }
+                }}
                 sx={{ 
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
                   p: 1.5, bgcolor: 'background.default', borderRadius: 3,

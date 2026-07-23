@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Avatar, Menu, MenuItem, IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField, Box } from '@mui/material';
 import { api, Cat } from '../services/api';
-import { Plus, Pencil } from 'lucide-react';
+import { Plus, Pencil, LogIn, LogOut } from 'lucide-react';
+import { LoginDialog } from './LoginDialog';
 
 interface CatProfileMenuProps {
   onCatChange: () => void;
@@ -18,6 +19,9 @@ export const CatProfileMenu: React.FC<CatProfileMenuProps> = ({ onCatChange }) =
   const [isEditOpen, setIsEditOpen] = useState(false);
   const [editCatId, setEditCatId] = useState<string | null>(null);
   const [editCatName, setEditCatName] = useState('');
+  
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const loadCats = async () => {
     const loadedCats = await api.getCats();
@@ -28,6 +32,9 @@ export const CatProfileMenu: React.FC<CatProfileMenuProps> = ({ onCatChange }) =
 
   useEffect(() => {
     loadCats();
+    api.isAdmin().then(setIsAdmin);
+    const sub = api.onAuthStateChange(setIsAdmin);
+    return () => sub.unsubscribe();
   }, []);
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -105,18 +112,42 @@ export const CatProfileMenu: React.FC<CatProfileMenuProps> = ({ onCatChange }) =
               </Avatar>
               {cat.name}
             </Box>
-            <IconButton size="small" onClick={(e) => openEditCat(e, cat)} sx={{ ml: 2 }}>
-              <Pencil size={16} />
-            </IconButton>
+            {isAdmin && (
+              <IconButton size="small" onClick={(e) => openEditCat(e, cat)} sx={{ ml: 2 }}>
+                <Pencil size={16} />
+              </IconButton>
+            )}
           </MenuItem>
         ))}
-        <MenuItem onClick={() => { setIsAddOpen(true); handleMenuClose(); }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', color: 'primary.main', minHeight: 32 }}>
-            <Plus size={20} style={{ marginRight: 16 }} />
-            Add New Cat
+        
+        {isAdmin && (
+          <MenuItem onClick={() => { setIsAddOpen(true); handleMenuClose(); }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', color: 'primary.main', minHeight: 32 }}>
+              <Plus size={20} style={{ marginRight: 16 }} />
+              Add New Cat
+            </Box>
+          </MenuItem>
+        )}
+        
+        <MenuItem onClick={() => {
+          if (isAdmin) {
+            api.logout();
+          } else {
+            setIsLoginOpen(true);
+          }
+          handleMenuClose();
+        }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', color: 'text.secondary', minHeight: 32 }}>
+            {isAdmin ? (
+              <><LogOut size={20} style={{ marginRight: 16 }} /> Logout</>
+            ) : (
+              <><LogIn size={20} style={{ marginRight: 16 }} /> Login as Admin</>
+            )}
           </Box>
         </MenuItem>
       </Menu>
+
+      <LoginDialog isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
 
       {/* Add Cat Dialog */}
       <Dialog open={isAddOpen} onClose={() => setIsAddOpen(false)} fullWidth maxWidth="xs">

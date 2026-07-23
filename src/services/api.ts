@@ -132,6 +132,33 @@ export const api = {
       .delete()
       .eq('id', id);
     if (error) throw error;
+  },
+  
+  // --- Auth Methods ---
+  login: async (password: string): Promise<void> => {
+    // Map the username 'paraiii' to the dummy email 'paraiii@cathub.local'
+    const { error } = await supabase.auth.signInWithPassword({
+      email: 'paraiii@cathub.local',
+      password: password,
+    });
+    if (error) throw error;
+  },
+  
+  logout: async (): Promise<void> => {
+    const { error } = await supabase.auth.signOut();
+    if (error) throw error;
+  },
+  
+  isAdmin: async (): Promise<boolean> => {
+    const { data: { session } } = await supabase.auth.getSession();
+    return !!session;
+  },
+  
+  onAuthStateChange: (callback: (isAdmin: boolean) => void) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      callback(!!session);
+    });
+    return subscription;
   }
 };
 
