@@ -136,31 +136,55 @@ export const api = {
   
   // --- Auth Methods ---
   login: async (password: string): Promise<void> => {
-    // Map the username 'paraiii' to the dummy email 'paraiii@cathub.local'
-    const { error } = await supabase.auth.signInWithPassword({
-      email: 'paraiii@cathub.local',
-      password: password,
-    });
-    if (error) throw error;
+    // 1. Fetch the user from custom table
+    const { data, error } = await supabase
+      .from('admin_users')
+      .select('password_hash')
+      .eq('username', 'paraiii')
+      .single();
+      
+    if (error || !data) {
+      throw new Error('Admin user not found in database.');
+    }
+
+    // 2. Hash the input password using SHA-256 to compare
+    const encoder = new TextEncoder();
+    const dataBuffer = encoder.encode(password);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+    // 3. Compare (supports both plain text if user stored it that way, or SHA256)
+    if (data.password_hash !== password && data.password_hash !== hashHex) {
+      throw new Error('Incorrect password');
+    }
+
+    // 4. Login successful, set local session
+    localStorage.setItem('cat_admin_session', 'true');
+    // Notify listeners
+    authListeners.forEach(listener => listener(true));
   },
   
   logout: async (): Promise<void> => {
-    const { error } = await supabase.auth.signOut();
-    if (error) throw error;
+    localStorage.removeItem('cat_admin_session');
+    authListeners.forEach(listener => listener(false));
   },
   
   isAdmin: async (): Promise<boolean> => {
-    const { data: { session } } = await supabase.auth.getSession();
-    return !!session;
+    return localStorage.getItem('cat_admin_session') === 'true';
   },
   
   onAuthStateChange: (callback: (isAdmin: boolean) => void) => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      callback(!!session);
-    });
-    return subscription;
+    authListeners.push(callback);
+    return {
+      unsubscribe: () => {
+        authListeners = authListeners.filter(l => l !== callback);
+      }
+    };
   }
 };
+
+let authListeners: Array<(isAdmin: boolean) => void> = [];
 
 // Initialize currentCatId from localStorage if available
 const savedCatId = localStorage.getItem('current_cat_id');
