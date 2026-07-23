@@ -17,7 +17,8 @@ export const LoginDialog: React.FC<LoginDialogProps> = ({ isOpen, onClose }) => 
     e.preventDefault();
     setError('');
     
-    if (username !== 'paraiii') {
+    const inputUsername = username.trim();
+    if (inputUsername !== 'paraiii' && inputUsername !== 'paraiii@cathub.admin') {
       setError('Invalid username');
       return;
     }
